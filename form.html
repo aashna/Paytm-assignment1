@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <script>
+function validateForm() {
+  /*  var x = document.forms["myForm"]["firstname"].value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+*/
+  alert(' hello world');
+  var x = document.forms["myForm"]["email"].value;
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+}
+</script>
+
+</head>
+<body>
+<form action="/" method="POST" name="myForm" onsubmit="return validateForm()">
+    First name:<br>
+    <input type="text" name="firstname" value="">
+    <br>
+    Email ID:<br>
+    <input type="text" name="email" value="">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
